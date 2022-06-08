@@ -6,6 +6,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+address{
+    font-weight: bold;
+    color: #000000;
+}
 a, button {
     transition: all .3s ease-in-out;
     outline: none!important;
@@ -89,10 +93,10 @@ a:hover {
 .d-bloc .divider-h span {
     border-color: rgba(255, 255, 255, .2);
 }
-.d-bloc .a-btn, .d-bloc .navbar a, .d-bloc .navbar-brand, .d-bloc a .icon-sm, .d-bloc a .icon-md, .d-bloc a .icon-lg, .d-bloc a .icon-xl, .d-bloc h1 a, .d-bloc h2 a, .d-bloc h3 a, .d-bloc h4 a, .d-bloc h5 a, .d-bloc h6 a, .d-bloc p a {
+.d-bloc .a-btn, .d-bloc .navbar a, .d-bloc .navbar-brand, .d-bloc a .icon-sm, .d-bloc a .icon-md, .d-bloc a .icon-lg, .d-bloc a .icon-xl, .d-bloc h3 a, .d-bloc p a {
     color: rgba(255, 255, 255, .6);
 }
-.d-bloc .a-btn:hover, .d-bloc .navbar a:hover, .d-bloc .navbar-brand:hover, .d-bloc a:hover .icon-sm, .d-bloc a:hover .icon-md, .d-bloc a:hover .icon-lg, .d-bloc a:hover .icon-xl, .d-bloc h1 a:hover, .d-bloc h2 a:hover, .d-bloc h3 a:hover, .d-bloc h4 a:hover, .d-bloc h5 a:hover, .d-bloc h6 a:hover, .d-bloc p a:hover {
+.d-bloc .a-btn:hover, .d-bloc .navbar a:hover, .d-bloc .navbar-brand:hover, .d-bloc a:hover .icon-sm, .d-bloc a:hover .icon-md, .d-bloc a:hover .icon-lg, .d-bloc a:hover .icon-xl, .d-bloc h3 a:hover, .d-bloc p a:hover {
     color: rgba(255, 255, 255, 1);
 }
 .d-bloc .navbar-toggle .icon-bar {
@@ -158,8 +162,10 @@ a:hover {
 .row-no-gutters {
     margin-right: 0;
     margin-left: 0;
+    display: flex;
+    justify-content: center;
 }
-.row.row-no-gutters > [class^="col-"], .row.row-no-gutters > [class*=" col-"] {
+.row .row-no-gutters > [class^="col-"], .row.row-no-gutters > [class*=" col-"] {
     padding-right: 0;
     padding-left: 0;
 }
@@ -173,13 +179,10 @@ a:hover {
 .navbar-brand {
     height: auto;
     padding: 3px 15px;
-    font-size: 25px;
     font-weight: normal;
     font-weight: 600;
-    line-height: 44px;
 }
 .navbar-brand img {
-    max-height: 200px;
     margin: 0 5px 0 0;
     display: inline;
 }
@@ -255,9 +258,15 @@ nav .caret {
     margin: 6px -5px 0 0!important;
     float: right;
 }
+.text-center{
+    color: #000000;
+    font-weight: bold;
+}
 .mg-md {
     margin-top: 10px;
     margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
 }
 .mg-lg {
     margin-top: 10px;
@@ -419,13 +428,9 @@ a[data-lightbox]:hover img {
     color: rgba(0, 0, 0, .5);
     background: none;
 }
-h1, h2, h3, h4, h5, h6, p, label, .btn, a {
+h3, h4, h5, h6, p, label, .btn {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
-}
-.container {
-    max-width: 1000px;
 }
 .hero-bloc-text {
     font-size: 38px;
@@ -463,6 +468,10 @@ p {
 .social {
     max-width: 400px;
     margin: auto auto auto auto;
+    color: #000000;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
 }
 h2 {
     font-size: 22px;
@@ -487,6 +496,10 @@ h1, h4, h3 {
 }
 .white, .cta-hero {
     color: #FFFFFF!important;
+}
+.img-responsive{
+    width: auto;
+    height: auto;
 }
 .portfolio-thumb {
     margin-bottom: 24px;
@@ -520,7 +533,7 @@ h1, h4, h3 {
 }
 .btn-atomic-tangerine {
     background: #F3976C;
-    color: #FFFFFF!important;
+    color: #000000!important;
 }
 .btn-atomic-tangerine:hover {
     background: #c27956!important;
@@ -549,10 +562,10 @@ h1, h4, h3 {
     background-image: url("img/lines-h2-bg.png");
 }
 .bg-banniere {
-    background-image: url("img/agence-la-panthere.jpg");
+    background-image: url("img/banniere.webp");
 }
 .bg-presentation {
-    background-image: url("img/image-de-presentation.jpg");
+    background-image: url("img/presentation.webp");
 }
 @media only screen and (min-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
@@ -581,8 +594,6 @@ h1, h4, h3 {
     .nav-center.navbar .nav {
         max-width: 100%
     }
-}
-@media (max-width: 991px) {
     .container {
         width: 100%;
     }
@@ -613,8 +624,8 @@ h1, h4, h3 {
         position: relative;
     }
     h1, h2, h3, h4, h5, h6, p, #disqus_thread {
-        padding-left: 10px!important;
-        padding-right: 10px!important;
+        padding-left: 20px!important;
+        padding-right: 20px!important;
     }
     .b-parallax {
         background-attachment: scroll;
@@ -624,7 +635,7 @@ h1, h4, h3 {
         border-top: 1px solid rgba(0, 0, 0, .2);
         float: none!important;
     }
-    .navbar.row {
+    .navbar .row {
         margin-left: 0;
         margin-right: 0;
     }
@@ -676,7 +687,6 @@ h1, h4, h3 {
         box-shadow: none;
     }
     .navbar-brand img {
-        max-height: 40px;
         width: auto;
     }
     .nav-invert .navbar-header {
